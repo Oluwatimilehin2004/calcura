@@ -1,0 +1,131 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.main-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: rgb(176, 175, 175); */
+    background: rgb(52, 52, 70);
+}
+
+.calculator{
+    width: 40%;
+    height: 60vh;
+    display: grid;
+    grid-template-rows: 7% 26% 57%;
+    grid-template-columns: 100%;
+    gap: 20px;
+    grid-template-areas: 
+    "block1"
+    "block2"
+    "block3"
+    ;
+}
+
+.top{
+    grid-area: block1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.displaced{
+    grid-area: block2;
+    background: rgb(31, 31, 60);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 3px 15px;
+    font-size: 25px;
+}
+.keyboard{
+    /* background: rgb(52, 1, 75); */
+    background: rgb(95, 95, 114);
+    grid-area: block3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 10px;
+}
+
+h5, h6{
+    color: white;
+    padding-top: 13px;
+}
+
+.topLeft h6{
+    text-transform: uppercase;
+}
+
+.topLeft{
+    height: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+.controller h6{
+    letter-spacing: 5px;
+    padding-top: 0;
+    font-size: 8px;
+}
+
+.controller{
+    height: 100%;
+}
+
+.control{
+    height: 47%;
+    background: rgb(95, 95, 114);
+    border-radius: 50px;
+    margin-top: 3px;
+    display: flex;
+    align-items: center;
+}
+
+.controlball{
+    background: transparent;
+    width: 25%;
+    height: 80%;
+    border-radius: 100%;
+    margin-left: 2px;
+}
+
+.ball{
+    background-color: orangered;
+}
+
+.btn{
+    width: 23%;
+    height: 35px;
+    border-radius: 8px;
+}
+
+.fifth .btn{
+    width: 48%;
+}
+
+.first, .second, .third, .fourth, .fifth{
+    width: 100%;
+    padding-left: 10px;
+}
+
+@media (min-width: 1280px) and (max-width: 1920px){
+    .calculator{
+        width: 20%; 
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1280px){
+    .calculator{
+        width: 25%;
+    }
+}
